@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "POST /init — создать платёж",
+      "method": "POST",
+      "path": "/init",
+      "body": { "plan": "standard", "server_id": 1, "email": "test@test.ru" },
+      "expectedStatus": 200,
+      "expectedBody": { "payment_url": "" },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "GET /status — несуществующий заказ",
+      "method": "GET",
+      "path": "/status?order_id=nonexistent_order",
+      "expectedStatus": 404,
+      "expectedBody": { "error": "Заказ не найден" },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
