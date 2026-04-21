@@ -246,7 +246,7 @@ function Navbar({ page, setPage }: { page: string; setPage: (p: string) => void 
         <button onClick={() => setPage("home")} className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-green-500/18 neon-border flex items-center justify-center text-base">⛏️</div>
           <span className="font-display text-lg font-bold text-white tracking-wider">
-            Mine<span className="neon-text">Top</span>
+            Mine<span className="neon-text">ED</span>
           </span>
         </button>
         <div className="hidden md:flex items-center gap-1">
@@ -975,7 +975,7 @@ function Footer({ setPage }: { setPage: (p: string) => void }) {
           <span>Правила</span>
           <span>Поддержка</span>
         </div>
-        <div className="text-xs text-white/18">© 2024 MineTop.ru</div>
+        <div className="text-xs text-white/18">© 2024 MineED.ru</div>
       </div>
     </footer>
   );
