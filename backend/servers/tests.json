@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "GET список серверов",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": { "servers": [] },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST добавить сервер",
+      "method": "POST",
+      "path": "/",
+      "body": { "name": "Test Server", "ip": "test.server.ru", "version": "1.20.4", "type": "Выживание", "description": "Тестовый сервер" },
+      "expectedStatus": 201,
+      "expectedBody": { "message": "Сервер добавлен" },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
